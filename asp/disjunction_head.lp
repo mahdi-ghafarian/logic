@@ -32,7 +32,7 @@ SATISFIABLE
 
 % or using (;) in the head yields the same result:
 
-p;q.
+% p;q.
 
 %* 
 Solving...
@@ -42,3 +42,14 @@ Answer: 2
 q
 SATISFIABLE 
 *%
+
+% let's see how disjunction in head works
+p.
+q,r :- p.
+
+% Solving...
+% Answer: 1
+% p q
+% Answer: 2
+% p r
+% SATISFIABLE

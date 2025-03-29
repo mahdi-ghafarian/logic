@@ -1,6 +1,8 @@
 % disjunction in body
 1{a1;a2}.
 
+% separate rules with same head
+% has the same effect as disjunction in body
 a :- a1.
 a :- a2.
 
