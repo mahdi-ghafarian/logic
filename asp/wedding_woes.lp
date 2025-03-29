@@ -1,4 +1,20 @@
+%* 
+Your best friend is getting married and asked you to be their wedding planner. You agreed, though everything you know about it is from a movie... Things were going smoothly, until you started working on the table seating.
 
+Five guests will be attending, seated around one big, round table. Here's the guest list:
+
+Esteban, Gustavo, Jaime, Malena, and Valeria.
+Your goal is to find a seating arrangement where everyone is happy with their neighbors. You don't know everyone quite as well as you'd like, but here's what you do know:
+
+Gustavo is chatty
+Valeria is chatty
+Esteban likes Malena
+Malena likes Esteban
+Gustavo likes Valeria (but not vice versa!)
+People who like each other can be seated next to each other, but only when they both feel that way. Chatty people intermingle easily and can be seated next to anyone.
+
+With these details in hand, it's time to sketch out a seating arrangement!
+*%
 %-----------------------------------------------------------------------------
 % PARAMETERS
 %-----------------------------------------------------------------------------
@@ -60,3 +76,16 @@ table(G1,G2,G3,G4,G5) :- at(1,G1), at(2,G2), at(3,G3), at(4,G4), at(5,G5).
 % #show pairing/2.
 % #show adj/2.
 #show table/5.
+
+%*
+Solving...
+Answer: 1
+table(gustavo,malena,esteban,valeria,jamie)
+Answer: 2
+table(gustavo,esteban,malena,valeria,jamie)
+Answer: 3
+table(gustavo,jamie,valeria,esteban,malena)
+Answer: 4
+table(gustavo,jamie,valeria,malena,esteban)
+SATISFIABLE
+ *%
