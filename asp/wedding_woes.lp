@@ -62,12 +62,17 @@ adj(G1,G2) :- at(X1,G1), at(X2,G2), |X1-X2|=n-1,
 % remove case where a guest is in two chairs
 :- at(X1,G), at(X2,G), X1!=X2.
 
-% remove cases where two people are adjacent but are not chatty 
-% and do not like eachother
+%remove cases where a guest likes another guest, but the other guest 
+% doesn't like them back
+:- adj(G1,G2), likes(G1,G2), not likes(G2,G1), guest(G1), guest(G2).
+
+% remove cases where a non chatty guest is seated next to a non chatty guest
+% and they don't like each other
 :- adj(G1,G2), not chatty(G1), not chatty(G2), 
     not likes(G1,G2),not like(G2,G1), guest(G1), guest(G2).
 
-% rermove rotations of the same arrangement
+% rermove rotations of the same arrangement, start with one guest 
+% at chair 1
 :- not at(1,gustavo).
 
 %-------------------------------------------------------------------------------
@@ -81,6 +86,9 @@ table(G1,G2,G3,G4,G5) :- at(1,G1), at(2,G2), at(3,G3), at(4,G4), at(5,G5).
 % #show pairing/2.
 % #show adj/2.
 #show table/5.
+
+% note that there are only 2 unique arrangements,
+% half of the arrangements are reverse(CCW) of the other(CW)
 
 %*
 Solving...
