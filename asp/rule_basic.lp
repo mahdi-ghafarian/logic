@@ -10,7 +10,7 @@ Solving...
 Answer: 1
 a
 SATISFIABLE
- *%
+*%
 
 %  (2) now remove the fact a from the knowledge base
 %  by using a constraint
@@ -21,8 +21,13 @@ SATISFIABLE
 
 %* 
 UNSATISFIABLE
+*%
 
-Models       : 0
- *%
+% (3) note that assigning a false value to an atom does not work
+% because in implication a false may imply a true or a false value
+% in contrast to a true value which implies a true value
+
+% a :- #false. % does not work
+
 
 
