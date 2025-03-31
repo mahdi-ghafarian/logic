@@ -1,4 +1,6 @@
 % another way to express a <=> b
+% Prolog reasoning is limited to the rules that we provide, and does not 
+% infere beyond those rules.
 
 % a => b
 b :- a.
