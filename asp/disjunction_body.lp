@@ -1,4 +1,4 @@
-% disjunction in body
+% create space (for asserting a1, a2, or both as facts)
 1{a1;a2}.
 
 % separate rules with same head
