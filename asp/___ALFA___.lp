@@ -1,21 +1,5 @@
-% possible worlds
-{p;q}.
+{p1;p2;p3;p4;p5;p6;p7;p8}.
 
-% rule
-r:- p,q.
+% p2 :- p1.
 
-% This program has four models which are also
-% answer sets because they are minimal.
 
-%* 
-Solving...
-Answer: 1
-p q r
-Answer: 2
-
-Answer: 3
-q
-Answer: 4
-p
-SATISFIABLE
- *%
