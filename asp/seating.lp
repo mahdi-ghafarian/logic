@@ -7,6 +7,11 @@
 % who like each other ; set dislike /2 of pairs of
 % guests who dislike each other .
 
+#const n = 6.
+
+like (1,2; 3,4).
+dislike (2,3; 1,3).
+
 % at (G , C ) means that guest G is assigned chair C .
 
 { at (G ,1.. n )} = 1 :- G = 1.. n.
@@ -27,9 +32,9 @@ adj (1 , n ; n ,1).
 % achieved : guests who don ’ t like each other don ’ t sit next
 % to each other .
 
+:- not at(1,1).
+% achieved : guest 1 is assigned chair 1 .
+
+%  output
 #show at /2.
 
-#const n = 6.
-
-like (1,2; 3,4).
-dislike (2,3; 1,3).
