@@ -35,6 +35,4 @@ adj (1 , n ; n ,1).
 %  start with first guest at first seat
 :- not at(1,1).
 
-
-
 #show at/2.
