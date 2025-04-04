@@ -10,6 +10,11 @@
 like (1,2; 3,4).
 dislike (2,3; 1,3).
 
+#const n = 6.
+
+like (1,2; 3,4).
+dislike (2,3; 1,3).
+
 % at (G , C ) means that guest G is assigned chair C .
 { at (G ,1.. n )} = 1 :- G = 1.. n.
 % achieved : each guest is assigned a chair .
@@ -29,10 +34,9 @@ adj (1 , n ; n ,1).
 % achieved : guests who don ’ t like each other don ’ t sit next
 % to each other .
 
-% start with G1 at C1
 :- not at(1,1).
+% achieved : guest 1 is assigned chair 1 .
 
-% Output
-table(G1,G2,G3,G4,G5,G6) :- at(G1,1),at(G1,2),at(G1,3),at(G1,4),at(G1,5),at(G1,6).
+%  output
+#show at /2.
 
-#show table/6.
